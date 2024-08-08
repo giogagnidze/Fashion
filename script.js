@@ -66,6 +66,7 @@ const neww = document.getElementById("neww");
 const sigma = document.getElementById("sigma");
 const design = document.getElementById("design");
 const english = document.getElementById("english");
+const newarrivals = document.getElementById("newarrivals");
  
 
 
@@ -137,6 +138,7 @@ function checked() {
     neww.innerHTML = `ბიულეტინი`
     design.innerHTML = `დიზაინი და კოდი გაკეთებული გიო გაგნიძე-ის მიერ`
     sigma.innerHTML = `იყავი პირველი, ვინც შეიტყო ახალი<br>ჩამოსვლების შესახებ, დაათვალიერე წიგნები, გაყიდვები და აქციები!`
+    newarrivals.innerHTML = `ახალი ჩამოსულები`
     
   } else {
     home.innerHTML = `Home` 
@@ -204,6 +206,7 @@ function checked() {
     neww.innerHTML = `NEWLETTER`
     sigma.innerHTML = `Be the first to know about new<br>arrivals, look books, sales & promos!`
     design.innerHTML = `Design and Code by Gio Gagnidze`
+    newarrivals.innerHTML = `New Arrivals`
   }
 }
 
