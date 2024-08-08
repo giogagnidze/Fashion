@@ -1,23 +1,211 @@
-$(document).ready(function () {
-    $("a").on("click", function (event) {
-      if (this.hash !== "") {
-        event.preventDefault();
-  
-        var hash = this.hash;
-        $("html, body").animate(
-          {
-            scrollTop: $(hash).offset().top,
-          },
-          800,
-          function () {
-            window.location.hash = hash;
-          }
-        );
-      }
-    });
-  });
-  
-  $(".menu-items a").click(function () {
-    $("#checkbox").prop("checked", false);
-  });
-  
+const check = document.getElementById("geo");
+const home = document.getElementById("home");
+const shop = document.getElementById("shop");
+const blog = document.getElementById("blog");
+const contact = document.getElementById("contact");
+const fashion = document.getElementById("fashion");
+const fashion1 = document.getElementById("fashion1");
+const summer = document.getElementById("summer");
+const fall = document.getElementById("fall");
+const txtt = document.getElementById("txtt");
+const shopnow = document.getElementById("shopnow");
+const clcl = document.getElementById("clcl");
+const shopnow1 = document.getElementById("shopnow1");
+const shopnow2 = document.getElementById("shopnow2");
+const shopnow3 = document.getElementById("shopnow3");
+const sspring = document.getElementById("sspring");
+const accessories = document.getElementById("accessories");
+const ts = document.getElementById("ts");
+const pse = document.getElementById("pse");
+const pse1 = document.getElementById("pse1");
+const pse2 = document.getElementById("pse2");
+const pse3 = document.getElementById("pse3");
+const buynow = document.getElementById("buynow");
+const buynow1 = document.getElementById("buynow1");
+const buynow2 = document.getElementById("buynow2");
+const buynow3 = document.getElementById("buynow3");
+const buynow4 = document.getElementById("buynow4");
+const buynow5 = document.getElementById("buynow5");
+const buynow6 = document.getElementById("buynow6");
+const buynow7 = document.getElementById("buynow7");
+const buynow8 = document.getElementById("buynow8");
+const buynow9 = document.getElementById("buynow9");
+const buynow10 = document.getElementById("buynow10");
+const n = document.getElementById("n");
+const ej = document.getElementById("ej");
+const es = document.getElementById("es");
+const ets = document.getElementById("ets");
+const ets1 = document.getElementById("ets1");
+const ets2 = document.getElementById("ets2");
+const eb = document.getElementById("eb");
+const eb1 = document.getElementById("eb1");
+const ess = document.getElementById("ess");
+const ln = document.getElementById("ln");
+const fnt = document.getElementById("fnt");
+const f12 = document.getElementById("f12");
+const wtf = document.getElementById("wtf");
+const readmore1 = document.getElementById("readmore1");
+const f17 = document.getElementById("f17");
+const wtf2 = document.getElementById("wtf2");
+const readmore2 = document.getElementById("readmore2");
+const readmore3 = document.getElementById("readmore3");
+const wtf3 = document.getElementById("wtf3");
+const f26 = document.getElementById("f26");
+const huh = document.getElementById("huh");
+const sh = document.getElementById("sh");
+const sh1 = document.getElementById("sh1");
+const cs = document.getElementById("cs");
+const tss = document.getElementById("tss");
+const a = document.getElementById("a");
+const sale = document.getElementById("sale");
+const contactus = document.getElementById("contactus");
+const payment = document.getElementById("payment");
+const delivery = document.getElementById("delivery");
+const returnn = document.getElementById("returnn");
+const neww = document.getElementById("neww");
+const sigma = document.getElementById("sigma");
+const design = document.getElementById("design");
+const english = document.getElementById("english");
+ 
+
+
+function checked() {
+  if (check.checked) {
+    home.innerHTML = `სახლი`
+    shop.innerHTML = `მაღაზია`
+    blog.innerHTML = `ბლოგი`
+    contact.innerHTML = `კონტაქტი`
+    fashion.innerHTML = `ტანსაცმელი`
+    fashion1.innerHTML = `ტანსაცმელი`
+    summer.innerHTML = `ზაფხულის კოლექცია`
+    fall.innerHTML = `შემოდგომა-ზამთრის<br>კოლექცია 2023`;
+    txtt.innerHTML = `სპეციალიზებული იარლიყი, რომელიც ქმნის ფუფუნების საჭირო ნივთებს.<br> ეთიკურად შემუშავებულიგანსაკუთრებული ხარისხის ურყევი ერთგულებით.`;
+    shopnow.innerHTML = `იშოპინგე ახლა`;
+    shopnow1.innerHTML = `იშოპინგე ახლა`;
+    shopnow2.innerHTML = `იშოპინგე ახლა`;
+    shopnow3.innerHTML = `იშოპინგე ახლა`;
+    clcl.innerHTML = `ტანსაცმლის კოლექციები`;
+    sspring.innerHTML = `საზაფხულო ფეხსაცმელი`;
+    accessories.innerHTML = `აქსესუარები`;
+    ts.innerHTML = `დიდი ფასდაკლება`;
+    pse.innerHTML = `ინგლისური ფეხსაცმელები`;
+    pse1.innerHTML = `ინგლისური ფეხსაცმელები`;
+    pse2.innerHTML = `ინგლისური ფეხსაცმელები`;
+    pse3.innerHTML = `ინგლისური ფეხსაცმელები`;
+    buynow.innerHTML = `იყიდე ახლავე`;
+    buynow1.innerHTML = `იყიდე ახლავე`;
+    buynow2.innerHTML = `იყიდე ახლავე`;
+    buynow3.innerHTML = `იყიდე ახლავე`;
+    buynow4.innerHTML = `იყიდე ახლავე`;
+    buynow5.innerHTML = `იყიდე ახლავე`;
+    buynow6.innerHTML = `იყიდე ახლავე`;
+    buynow7.innerHTML = `იყიდე ახლავე`;
+    buynow8.innerHTML = `იყიდე ახლავე`;
+    buynow9.innerHTML = `იყიდე ახლავე`;
+    buynow10.innerHTML = `იყიდე ახლავე`;
+    n.innerHTML = `იყიდე ახლავე`;
+    ej.innerHTML = `ინგლისური ჟაკეტები`;
+    es.innerHTML = `ინგლისური პერანგები`;
+    ets.innerHTML = `ინგლისური მაისურები`;
+    ets1.innerHTML = `ინგლისური მაისურები`;
+    ets2.innerHTML = `ინგლისური მაისურები`;
+    eb.innerHTML = `ინგლისური ჩანთები`;
+    eb1.innerHTML = `ინგლისური ჩანთები`;
+    ess.innerHTML = `ინგლისური სათვალეები`;
+    ln.innerHTML = `ახალი ამბები`;
+    fnt.innerHTML = `მოდის ახალი ტენდენციები`;
+    readmore1.innerHTML = `წაიკითხე `;
+    readmore2.innerHTML = `წაიკითხე `;
+    readmore3.innerHTML = `წაიკითხე `;
+    f12.innerHTML = `12 თებერვალი 2024`;
+    f17.innerHTML = `17 თებერვალი 2024`;
+    f26.innerHTML = `26 თებერვალი 2024`;
+    wtf.style.display = 'none';
+    wtf2.style.display = 'none';
+    wtf3.style.display = 'none';
+    huh.innerHTML = 'მომხმარებელი ჩვენი<br>უნიკალური ბიზნეს მოდელის გულშია, რომელიც მოიცავს<br>დიზაინს';
+    sh.innerHTML = 'შოპინგი';
+    sh1.innerHTML = 'შოპინგი';
+    cs.innerHTML = `ტანსაცმლის მაღაზია`
+    tss.innerHTML = `ტრენდული ფეხსაცმელები`
+    a.innerHTML = `აქსესუარები`
+    sale.innerHTML = `ფასდაკლებები`
+    contactus.innerHTML = `დაგვეკონტაქტე`
+    payment.innerHTML = `გადახდის მეთოდები`
+    delivery.innerHTML = `მოწოდება`
+    returnn.innerHTML = `დაბრუნება და გაცვლა`
+    neww.innerHTML = `ბიულეტინი`
+    design.innerHTML = `დიზაინი და კოდი გაკეთებული გიო გაგნიძე-ის მიერ`
+    sigma.innerHTML = `იყავი პირველი, ვინც შეიტყო ახალი<br>ჩამოსვლების შესახებ, დაათვალიერე წიგნები, გაყიდვები და აქციები!`
+    
+  } else {
+    home.innerHTML = `Home` 
+    shop.innerHTML = `Shop`
+    blog.innerHTML = `Blog`
+    contact.innerHTML = `Contact`
+    fashion.innerHTML = `Fashion`
+    summer.innerHTML = `SUMMER COLLECTION`
+    fall.innerHTML = `FALL - WINTER<br>Collection 2023`
+    txtt.innerHTML = `A specialist label creating luxury essentials. Ethically crafted<br>with an unwavering commitment to exceptional quality.`
+    shopnow.innerHTML = `SHOP NOW`
+    shopnow1.innerHTML = `SHOP NOW`
+    shopnow2.innerHTML = `SHOP NOW`
+    shopnow3.innerHTML = `SHOP NOW`
+    clcl.innerHTML = `Clothing Collections`
+    sspring.innerHTML = `Shoes Spring`
+    accessories.innerHTML = `Accessories`
+    ts.innerHTML = `Top Sales`
+    pse.innerHTML = `England Shoes`
+    pse1.innerHTML = `England Shoes`
+    pse2.innerHTML = `England Shoes`
+    pse3.innerHTML = `England Shoes`
+    buynow.innerHTML = `Buy Now`
+    buynow1.innerHTML = `Buy Now`;
+    buynow2.innerHTML = `Buy Now`;
+    buynow3.innerHTML = `Buy Now`;
+    buynow4.innerHTML = `Buy Now`;
+    buynow5.innerHTML = `Buy Now`;
+    buynow6.innerHTML = `Buy Now`;
+    buynow7.innerHTML = `Buy Now`;
+    buynow8.innerHTML = `Buy Now`;
+    buynow9.innerHTML = `Buy Now`;
+    buynow10.innerHTML = `Buy Now`;
+    n.innerHTML = `Buy Now`;
+    ej.innerHTML = `England Jacket`;
+    es.innerHTML = `England Shirt`;
+    ets.innerHTML = `England T-Shirt`;
+    ets1.innerHTML = `England T-Shirt`;
+    ets2.innerHTML = `England T-Shirt`;
+    eb.innerHTML = `England Bag`;
+    eb1.innerHTML = `England Bag`;
+    ess.innerHTML = `England Sunglass`;
+    ln.innerHTML = `LATEST NEWS`;
+    fnt.innerHTML = `Fashion New Trends`;
+    readmore1.innerHTML = `Read More`;
+    readmore2.innerHTML = `Read More`;
+    readmore3.innerHTML = `Read More`;
+    f12.innerHTML = `12 February 2024`;
+    f17.innerHTML = `17 February 2024`;
+    f26.innerHTML = `26 February 2024`;
+    wtf.innerHTML = `What Curling Irons Are The Best Ones`;
+    wtf2.innerHTML = `The Health Benefits Of Sunglasses`;
+    wtf3.innerHTML = `Eternity Bands Do Last Forever`;
+    huh.innerHTML = `The customer is at the heart of our<br>unique business model, which includes<br>design.`;
+    sh.innerHTML = `SHOPPING`;
+    sh1.innerHTML = `SHOPPING`;
+    cs.innerHTML = `Clothing Store`
+    tss.innerHTML = `Trending Shoes`
+    a.innerHTML = `Accessories`
+    sale.innerHTML = `Sale`
+    contactus.innerHTML = `Contact Us`
+    payment.innerHTML = `Payment Method`
+    delivery.innerHTML = `Delivery`
+    returnn.innerHTML = `Return and Exchange`
+    neww.innerHTML = `NEWLETTER`
+    sigma.innerHTML = `Be the first to know about new<br>arrivals, look books, sales & promos!`
+    design.innerHTML = `Design and Code by Gio Gagnidze`
+  }
+}
+
+
+check.addEventListener('change', checked);

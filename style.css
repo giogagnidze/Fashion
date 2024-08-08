@@ -16,7 +16,7 @@ body {
 }
 
 :root {
-    --primary-color: #ff3c78;
+    --primary-color: #ff0000;
     --light-black: rgba(0, 0, 0, 0.89);
     --black: #000;
     --white: #fff;
@@ -71,12 +71,13 @@ body {
 .menu-items {
     order: 2;
     display: flex;
+    gap: 50px;
     margin-right: 3rem;
 }
 
 .menu-items li {
-    list-style: none;
     margin-left: 1.5rem;
+    list-style: none;
     font-size: 1.2rem;
 }
 
@@ -209,18 +210,46 @@ body {
         display: none;
     }
 }
-
+@media (max-width: 1200px) {
+    .home_page img{
+        display: none;
+    }
+    main{
+        position: relative;
+        top: 500px;
+    }
+    footer{
+        position: relative;
+        top: 500px;
+    }
+}
+@keyframes moveUpDown {
+    0% { 
+        top: 0px; 
+    }
+    50% { 
+        top: 50px; 
+    }
+    100% { 
+        top: 0px; 
+    }
+}
 .home_page img {
     height: auto;
-    width: 100%;
+    width: 600px;
     background-position: center;
     position: relative;
+    left: -150px;
     background-size: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    animation: moveUpDown 3s ease-in-out infinite;
 }
-
+.home_img{
+    display: flex;
+    justify-content: end;
+}
 .home_txt {
     position: absolute;
     top: 37%;
@@ -556,7 +585,7 @@ body {
 }
 
 .best-seller .brown {
-    color: rgb(175, 53, 53);
+    color: #ff0000;
     cursor: pointer;
 }
 
@@ -606,7 +635,7 @@ body {
 }
 
 .seller a:hover {
-    color: #f05e8a;
+    color: #ff0000;
 }
 
 .best-seller .buy-now button,
@@ -616,15 +645,17 @@ body {
     font-size: 14px;
     cursor: pointer;
     text-transform: uppercase;
-    background-color: #f05e8a;
+    background-color: #ff0000;
     color: var(--white);
     border: none;
     border-radius: 15px;
     font-weight: 500;
-    border: 1px solid #f05e8a;
+    border: 1px solid #ff0000;
     transition: 0.5s;
 }
-
+h1{
+    color: #ff0000;
+}
 .best-seller .buy-now button:hover,
 .best-seller .add-cart button:hover {
     background-color: var(--white);
@@ -633,7 +664,7 @@ body {
 
 .best-seller .buy-now button:hover a,
 .best-seller .add-cart button:hover a {
-    color: #f05e8a;
+    color: #ff0000;
 }
 
 .deal_of_week {
@@ -802,7 +833,7 @@ body {
 .l-news1 .news1-conte .date-news1 a::after {
     content: "";
     position: absolute;
-    background: #ff3c78;
+    background: #ff0000;
     height: 3px;
     width: 100%;
     left: 0;
@@ -843,7 +874,7 @@ body {
 .l-news2 .news2-conte .date-news2 a::after {
     content: "";
     position: absolute;
-    background: #ff3c78;
+    background: #ff0000;
     height: 3px;
     width: 100%;
     left: 0;
@@ -884,7 +915,7 @@ body {
 .l-news3 .news3-conte .date-news3 a::after {
     content: "";
     position: absolute;
-    background: #ff3c78;
+    background: #ff0000;
     height: 3px;
     width: 100%;
     left: 0;
@@ -909,7 +940,9 @@ footer {
     height: 25px;
     width: 180px;
 }
-
+.content_1 h2{
+    color: #ff0000;
+}
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -1070,10 +1103,6 @@ iframe {
     .top-txt .head a {
         font-size: 10px;
     }
-    .home_txt h2,
-    .home_txt .home_label p {
-        display: none;
-    }
     .home_txt {
         position: absolute;
         top: 20%;
@@ -1083,13 +1112,6 @@ iframe {
     .home_txt button {
         padding: 7px 7px;
         font-size: 10px;
-    }
-    .home_txt i {
-        display: none;
-    }
-    .home_txt .home_social_icons {
-        /* display: flex; */
-        display: none;
     }
     .menu-items {
         margin-right: 0;
@@ -1128,10 +1150,6 @@ iframe {
     .top-txt .head a {
         font-size: 10px;
     }
-    .home_txt h2,
-    .home_txt .home_label p {
-        display: none;
-    }
     .home_txt {
         position: absolute;
         top: 20%;
@@ -1141,12 +1159,6 @@ iframe {
     .home_txt button {
         padding: 7px 7px;
         font-size: 10px;
-    }
-    .home_txt i {
-        display: none;
-    }
-    .home_txt .home_social_icons {
-        display: none;
     }
     .menu-items {
         margin-right: 0;
@@ -1218,4 +1230,73 @@ iframe {
     .form .form-details input[type="text"] {
         margin-bottom: 0px;
     }
+}
+
+form{
+    padding-left: 50px;
+}
+
+.checkbox.style-a {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+.checkbox.style-a input {
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkbox.style-a input:checked ~ .checkbox__checkmark {
+    background-color: #fff;
+}
+.checkbox.style-a input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+}
+.checkbox.style-a:hover input ~ .checkbox__checkmark {
+    background-color: #eee;
+}
+.checkbox.style-a:hover input:checked ~ .checkbox__checkmark {
+    background-color: #fff;
+}
+.checkbox.style-a .checkbox__checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #333;
+    transition: background-color 0.25s ease;
+    border-radius: 3px;
+}
+.checkbox.style-a .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #333;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+.checkbox.style-a .checkbox__body {
+    color: #333;
+    line-height: 1.4;
+    font-size: 16px;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ff0000;
+    border-radius: 6px;
+    transition: 0.5s;
+} 
+::-webkit-scrollbar-thumb:hover{
+    background-color: #ff0000;
 }
